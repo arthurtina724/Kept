@@ -11,3 +11,8 @@ next-env.d.ts.bak
 
 # Claude Code — per-user overrides (machine-specific paths)
 .claude/settings.local.json
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key
