@@ -5,19 +5,19 @@
      Claude reads this file at the start of every session to auto-resume from the last checkpoint.
      If this file is missing or empty, PDLC will prompt you to run /pdlc init. -->
 
-**Last updated:** 2026-04-22T00:00:00Z
+**Last updated:** 2026-04-22T23:20:00Z
 
 ---
 
 ## Current Phase
 
-Initialization
+Inception Complete — Ready for /pdlc build
 
 ---
 
 ## Current Feature
 
-none
+image-upload
 
 ---
 
@@ -35,7 +35,7 @@ none
 
 ## Last Checkpoint
 
-Initialization / — / 2026-04-22T00:00:00Z
+Inception / Plan / 2026-04-22T23:20:00Z
 
 ---
 
@@ -72,12 +72,22 @@ agent-teams
 
 ```json
 {
-  "phase_completed": null,
-  "next_phase": null,
-  "feature": null,
-  "key_outputs": [],
-  "decisions_made": [],
-  "next_action": null,
+  "phase_completed": "Inception / Plan",
+  "next_phase": "Construction / Build",
+  "feature": "image-upload",
+  "key_outputs": [
+    "docs/pdlc/prds/PRD_image-upload_2026-04-22.md",
+    "docs/pdlc/design/image-upload/ARCHITECTURE.md",
+    "docs/pdlc/design/image-upload/data-model.md",
+    "docs/pdlc/design/image-upload/api-contracts.md",
+    "docs/pdlc/prds/plans/plan_image-upload_2026-04-22.md"
+  ],
+  "decisions_made": [
+    "15 Beads tasks across 5 waves; 7-task critical path (9vz → ivh → vow → sxf → e6e → 0b0 → ty8)",
+    "Wave 1 has 5 fully-parallel foundation tasks with no inter-dependencies",
+    "deletePhoto ships as stub in F-001; real impl in F-002 item-edit"
+  ],
+  "next_action": "Start Construction — run `/pdlc build` or read skills/build/SKILL.md",
   "pending_questions": []
 }
 ```
@@ -89,3 +99,9 @@ agent-teams
 | Timestamp | Event | Phase | Sub-phase | Feature |
 |-----------|-------|-------|-----------|---------|
 | 2026-04-22T00:00:00Z | init | Initialization | — | none |
+| 2026-04-22T21:30:00Z | init_complete | Initialization Complete | — | none |
+| 2026-04-22T21:35:00Z | phase_start | Inception | Discover | image-upload |
+| 2026-04-22T22:50:00Z | subphase_complete | Inception | Discover → Define | image-upload |
+| 2026-04-22T23:00:00Z | subphase_complete | Inception | Define → Design | image-upload |
+| 2026-04-22T23:10:00Z | subphase_complete | Inception | Design → Plan | image-upload |
+| 2026-04-22T23:20:00Z | inception_complete | Inception Complete | Plan | image-upload |

@@ -5,24 +5,24 @@ A personal inventory app. Built from the `kept/` handoff bundle per the tech sta
 ## Quick start
 
 ```bash
-npm install
-npm run db:generate   # creates drizzle migration (already committed — safe to skip)
-npm run db:migrate    # applies migrations to ./data/dev.db
-npm run db:seed       # loads the prototype's sample collections + items
-npm run dev           # http://localhost:3000
+pnpm install
+pnpm run db:generate   # creates drizzle migration (already committed — safe to skip)
+pnpm run db:migrate    # applies migrations to ./data/dev.db
+pnpm run db:seed       # loads the prototype's sample collections + items
+pnpm run dev           # http://localhost:3000
 ```
 
 ## Scripts
 
 | Command | What it does |
 |---|---|
-| `npm run dev` | Next dev server on :3000 |
-| `npm run build` | Production build |
-| `npm start` | Serve the production build |
-| `npm run db:generate` | Regenerate SQL migrations from `src/lib/db/schema.ts` |
-| `npm run db:migrate` | Apply migrations to the SQLite file |
-| `npm run db:seed` | Clear + re-seed with prototype data (21 items, 3 collections) |
-| `npm run db:studio` | Open Drizzle Studio against the dev DB |
+| `pnpm dev` | Next dev server on :3000 |
+| `pnpm build` | Production build |
+| `pnpm start` | Serve the production build |
+| `pnpm run db:generate` | Regenerate SQL migrations from `src/lib/db/schema.ts` |
+| `pnpm run db:migrate` | Apply migrations to the SQLite file |
+| `pnpm run db:seed` | Clear + re-seed with prototype data (21 items, 3 collections) |
+| `pnpm run db:studio` | Open Drizzle Studio against the dev DB |
 
 ## Layout
 
